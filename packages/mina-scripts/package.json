@@ -1,6 +1,6 @@
 {
   "name": "mina-scripts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Scripts for wechat app",
   "license": "MIT",
   "engines": {
