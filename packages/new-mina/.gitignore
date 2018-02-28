@@ -1,0 +1,8 @@
+# Directories
+node_modules
+/coverage
+/tmp
+/test/my-app
+
+# Files
+*.log

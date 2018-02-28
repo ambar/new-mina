@@ -1,0 +1,12 @@
+{
+  "description": "https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/edit.html",
+  "projectname": "my-app",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "setting": {
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "urlCheck": true
+  }
+}

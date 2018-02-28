@@ -1,0 +1,21 @@
+<config>
+{
+  "pages": ["pages/home.mina"],
+  "window": {
+    "backgroundColor": "#ebebeb",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Wechat",
+    "navigationBarTextStyle": "black",
+  },
+}
+</config>
+
+<style>
+/* global styles */
+@import './styles/utils.wxss';
+</style>
+
+<script>
+App({})
+</script>

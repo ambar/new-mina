@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create should add new app 1`] = `
+Array [
+  "package.json",
+  "postcss.config.js",
+  "prettier.config.js",
+  "yarn.lock",
+  "src/app.mina",
+  "src/project.config.json",
+  "src/components/counter.mina",
+  "src/pages/home.mina",
+  "src/styles/utils.wxss",
+]
+`;
+
+exports[`create should add new app 2`] = `
+Array [
+  "dist/app.js",
+  "dist/app.json",
+  "dist/app.wxss",
+  "dist/common.js",
+  "dist/project.config.json",
+  "dist/components/counter.js",
+  "dist/components/counter.json",
+  "dist/components/counter.wxml",
+  "dist/components/counter.wxss",
+  "dist/pages/home.js",
+  "dist/pages/home.json",
+  "dist/pages/home.wxml",
+  "dist/pages/home.wxss",
+]
+`;

@@ -1,0 +1,37 @@
+<config>
+{
+  "navigationBarTitleText": "Home",
+  "usingComponents": {
+    "counter": "/components/counter.mina",
+  }
+}
+</config>
+
+<style>
+.HomePage-hero {
+  margin: 2em;
+  font-size: 2em;
+  text-align: center;
+}
+</style>
+
+<template>
+  <view class="HomePage">
+    <view class="HomePage-hero">
+      {{message}}
+      <counter />
+    </view>
+  </view>
+</template>
+
+<script>
+Page({
+  data: {
+    message: 'Hello',
+  },
+
+  onLoad(option) {
+    this.setData({message: this.data.message + ', world.'})
+  },
+})
+</script>

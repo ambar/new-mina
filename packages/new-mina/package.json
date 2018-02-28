@@ -1,0 +1,27 @@
+{
+  "name": "new-mina",
+  "version": "0.0.0",
+  "description": "Create Wechat app",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "bin": "./bin/new-mina.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "execa": "^0.9.0",
+    "fancy-log": "^1.3.2",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {
+    "globby": "^8.0.1",
+    "jest": "^22.4.2"
+  }
+}

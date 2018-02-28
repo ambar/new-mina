@@ -1,0 +1,40 @@
+<config>
+{
+  "component": true
+}
+</config>
+
+<style>
+.counter {
+  font-size: 2em;
+  font-family: Menlo, monospace;
+}
+</style>
+
+<template>
+  <view class="counter">
+    {{count}}
+  </view>
+</template>
+
+<script>
+Component({
+  data: {
+    count: 0,
+  },
+
+  attached() {
+    this.timer = setInterval(() => this.increase(), 100)
+  },
+
+  detached() {
+    clearInterval(this.timer)
+  },
+
+  methods: {
+    increase() {
+      this.setData({count: this.data.count + 1})
+    },
+  },
+})
+</script>
