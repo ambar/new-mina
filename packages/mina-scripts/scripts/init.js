@@ -19,6 +19,9 @@ const init = async () => {
     projectname: name,
   })
   fs.writeFileSync(projectConfigFile, JSON.stringify(projectConfig, null, '  '))
+
+  // rename `gitignore`, see https://github.com/npm/npm/issues/1862
+  fs.moveSync('gitignore', '.gitignore')
 }
 
 module.exports = init

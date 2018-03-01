@@ -20,14 +20,16 @@ describe('create', () => {
 
     await execP(`rm -rf ${appName}`)
     const script = `file:${resolveRelative('../../mina-scripts')}`
-    await execP(`node ../bin/new-mina --script ${script} ${appName}`)
+    await execP(`node ../bin/new-mina -y --script ${script} ${appName}`)
 
     process.chdir(appDir)
-    const getAppfiles = () => globby(`**/*.*`, {gitignore: true})
-    const getDistfiles = () => globby(`dist/**/*.*`)
-    expect(await getAppfiles()).toMatchSnapshot()
+    const ignore = '!**/.DS_Store'
+    const getAppfiles = () =>
+      globby([`**/*.*`, ignore], {gitignore: true, dot: true})
+    const getDistfiles = () => globby([`dist/**/*.*`, ignore], {dot: true})
+    expect((await getAppfiles()).sort()).toMatchSnapshot()
 
     await execP(`npm run build`)
-    expect(await getDistfiles()).toMatchSnapshot()
+    expect((await getDistfiles()).sort()).toMatchSnapshot()
   })
 })

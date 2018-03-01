@@ -2,15 +2,19 @@
 
 exports[`create should add new app 1`] = `
 Array [
+  ".babelrc",
+  ".gitattributes",
+  ".gitignore",
+  ".vscode/settings.json",
   "package.json",
   "postcss.config.js",
   "prettier.config.js",
-  "yarn.lock",
   "src/app.mina",
-  "src/project.config.json",
   "src/components/counter.mina",
   "src/pages/home.mina",
+  "src/project.config.json",
   "src/styles/utils.wxss",
+  "yarn.lock",
 ]
 `;
 
@@ -20,7 +24,6 @@ Array [
   "dist/app.json",
   "dist/app.wxss",
   "dist/common.js",
-  "dist/project.config.json",
   "dist/components/counter.js",
   "dist/components/counter.json",
   "dist/components/counter.wxml",
@@ -29,5 +32,6 @@ Array [
   "dist/pages/home.json",
   "dist/pages/home.wxml",
   "dist/pages/home.wxss",
+  "dist/project.config.json",
 ]
 `;
