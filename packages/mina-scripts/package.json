@@ -25,6 +25,7 @@
     "@tinajs/mina-loader": "^0.5.1",
     "@tinajs/mina-runtime-webpack-plugin": "^0.1.4",
     "babel-loader": "8.0.0-beta.0",
+    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
     "copy-webpack-plugin": "^4.4.1",
     "file-loader": "^1.1.6",
     "fs-extra": "^5.0.0",
