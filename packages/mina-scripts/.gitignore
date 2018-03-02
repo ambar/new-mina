@@ -1,7 +1,7 @@
 # Directories
 /node_modules
 /coverage
-/dist
+dist
 
 # Files
 *.log
