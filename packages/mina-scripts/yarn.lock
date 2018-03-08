@@ -448,15 +448,15 @@
     resolve-from "^4.0.0"
     vue-template-compiler "^2.5.3"
 
-"@tinajs/mina-loader@^0.5.1":
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/@tinajs/mina-loader/-/mina-loader-0.5.1.tgz#e8df5cc30a76e66bdfa3e94790c2be3089427889"
+"@tinajs/mina-loader@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@tinajs/mina-loader/-/mina-loader-0.5.2.tgz#26a6104c289a45bd0b4b915e6a5b375af9f61e48"
   dependencies:
     "@tinajs/mina-sfc" "^0.2.0"
     compose-function "^3.0.3"
     css-loader "^0.28.7"
     ensure-posix-path "^1.0.2"
-    extract-loader "^1.0.1"
+    extract-loader "1.0.1"
     file-loader "^1.1.5"
     json5 "^0.5.1"
     loader-utils "^1.1.0"
@@ -1616,9 +1616,9 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extract-loader@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-1.0.2.tgz#1792ebe8d4638930d1819f25b7bf7199cec47aa8"
+extract-loader@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-1.0.1.tgz#f82dbb0e17f7358e8ed99efc3556f77eba03f44f"
   dependencies:
     loader-utils "^1.1.0"
 
