@@ -448,9 +448,9 @@
     resolve-from "^4.0.0"
     vue-template-compiler "^2.5.3"
 
-"@tinajs/mina-loader@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@tinajs/mina-loader/-/mina-loader-0.5.2.tgz#26a6104c289a45bd0b4b915e6a5b375af9f61e48"
+"@tinajs/mina-loader@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@tinajs/mina-loader/-/mina-loader-0.6.0.tgz#ca02d40def5583ab9fb8fa1795ec8f37ea029321"
   dependencies:
     "@tinajs/mina-sfc" "^0.2.0"
     compose-function "^3.0.3"

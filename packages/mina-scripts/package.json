@@ -1,6 +1,6 @@
 {
   "name": "mina-scripts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Scripts for wechat app",
   "license": "MIT",
   "engines": {
@@ -22,7 +22,7 @@
     "@babel/core": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
     "@tinajs/mina-entry-webpack-plugin": "^0.6.2",
-    "@tinajs/mina-loader": "^0.5.2",
+    "@tinajs/mina-loader": "^0.6.0",
     "@tinajs/mina-runtime-webpack-plugin": "^0.1.4",
     "babel-loader": "8.0.0-beta.0",
     "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
