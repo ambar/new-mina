@@ -17,7 +17,7 @@ const loadUserConfig = () => {
   return null
 }
 
-const resolveConfig = async () => {
+const resolveConfig = () => {
   let baseConfig = {
     webpack: require('../../config/webpack.config.base'),
   }
