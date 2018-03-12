@@ -49,6 +49,15 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.wxs$/,
+        use: {
+          loader: 'relative-file-loader',
+          options: {
+            name: 'assets/[name].[hash:6].[ext]',
+          },
+        },
+      },
     ],
   },
   plugins: [

@@ -32,6 +32,7 @@
     "lodash": "^4.17.5",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.1",
+    "relative-file-loader": "^1.1.12",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.11.0",
     "yargs": "^11.0.0"
