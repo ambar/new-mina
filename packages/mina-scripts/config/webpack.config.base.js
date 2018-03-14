@@ -41,7 +41,6 @@ module.exports = {
       // wxml/js 中的静态资源引用
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        include: srcDir,
         use: {
           loader: 'file-loader',
           options: {
