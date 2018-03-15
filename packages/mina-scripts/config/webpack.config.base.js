@@ -35,7 +35,8 @@ module.exports = {
       },
       {
         test: /\.mina$/,
-        include: /node_modules/,
+        // node_modules or linked packages
+        exclude: srcDir,
         use: '@tinajs/mina-loader',
       },
       // wxml/js 中的静态资源引用
