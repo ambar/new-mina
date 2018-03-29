@@ -435,9 +435,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@tinajs/mina-entry-webpack-plugin@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@tinajs/mina-entry-webpack-plugin/-/mina-entry-webpack-plugin-0.6.2.tgz#ccb1d956f8cbf502f79125c50d12f89b9845f9e2"
+"@tinajs/mina-entry-webpack-plugin@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@tinajs/mina-entry-webpack-plugin/-/mina-entry-webpack-plugin-0.6.3.tgz#1dd88dff44bbd871b2701d36a5f1a056b60d324d"
   dependencies:
     ensure-posix-path "^1.0.2"
     flatten "^1.0.2"
@@ -448,15 +448,15 @@
     resolve-from "^4.0.0"
     vue-template-compiler "^2.5.3"
 
-"@tinajs/mina-loader@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@tinajs/mina-loader/-/mina-loader-0.6.0.tgz#ca02d40def5583ab9fb8fa1795ec8f37ea029321"
+"@tinajs/mina-loader@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@tinajs/mina-loader/-/mina-loader-0.6.2.tgz#98e5815cd9027f0a7a020c78dd01726595c3fd45"
   dependencies:
     "@tinajs/mina-sfc" "^0.2.0"
     compose-function "^3.0.3"
     css-loader "^0.28.7"
     ensure-posix-path "^1.0.2"
-    extract-loader "1.0.1"
+    extract-loader "^2.0.1"
     file-loader "^1.1.5"
     json5 "^0.5.1"
     loader-utils "^1.1.0"
@@ -1616,9 +1616,9 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extract-loader@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-1.0.1.tgz#f82dbb0e17f7358e8ed99efc3556f77eba03f44f"
+extract-loader@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/extract-loader/-/extract-loader-2.0.1.tgz#3dfa57d5922c0edbb6248490183ff8602e7cc92b"
   dependencies:
     loader-utils "^1.1.0"
 
