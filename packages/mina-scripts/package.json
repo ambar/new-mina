@@ -1,6 +1,6 @@
 {
   "name": "mina-scripts",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Scripts for wechat app",
   "license": "MIT",
   "engines": {
@@ -37,6 +37,5 @@
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.11.0",
     "yargs": "^11.0.0"
-  },
-  "devDependencies": {}
+  }
 }
