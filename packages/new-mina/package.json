@@ -1,7 +1,8 @@
 {
   "name": "new-mina",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Create Wechat app",
+  "repository": "ambar/new-mina",
   "license": "MIT",
   "engines": {
     "node": ">=8"

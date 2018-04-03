@@ -1,7 +1,8 @@
 {
   "name": "mina-scripts",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Scripts for wechat app",
+  "repository": "ambar/new-mina",
   "license": "MIT",
   "engines": {
     "node": ">=8"
