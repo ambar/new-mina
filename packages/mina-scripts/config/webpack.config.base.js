@@ -12,6 +12,8 @@ const distDir = resolveCwd('dist')
 
 module.exports = {
   context: srcDir,
+  // issue: https://github.com/tinajs/mina-webpack/issues/12
+  parallelism: 999,
   entry: 'app.mina',
   output: {
     path: distDir,
