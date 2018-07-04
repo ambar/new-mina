@@ -39,7 +39,19 @@ module.exports = {
         test: /\.mina$/,
         // node_modules or linked packages
         exclude: srcDir,
-        use: '@tinajs/mina-loader',
+        use: {
+          loader: '@tinajs/mina-loader',
+          options: {
+            loaders: {
+              script: 'babel-loader',
+            },
+          },
+        },
+      },
+      // babel 转换，以匹配 browserslist
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
       },
       // wxml/js 中的静态资源引用
       {
