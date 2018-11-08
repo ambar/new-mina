@@ -23,6 +23,6 @@
   },
   "devDependencies": {
     "globby": "^8.0.1",
-    "jest": "^22.4.2"
+    "jest": "^23.6.0"
   }
 }

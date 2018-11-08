@@ -3,8 +3,10 @@
 exports[`create should add new app 1`] = `
 Array [
   ".babelrc",
+  ".browserslistrc",
   ".gitattributes",
   ".gitignore",
+  ".vscode/extensions.json",
   ".vscode/settings.json",
   "package.json",
   "postcss.config.js",
