@@ -1,9 +1,2 @@
 # Directories
-node_modules
-/coverage
-/tmp
 /test/my-app
-
-# Files
-*.log
-.DS_Store
