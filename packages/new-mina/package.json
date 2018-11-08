@@ -18,8 +18,5 @@
   ],
   "dependencies": {
     "gogen": "^0.0.7"
-  },
-  "devDependencies": {
-    "jest": "^23.6.0"
   }
 }

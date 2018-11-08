@@ -1,3 +1,10 @@
 {
-  "private": true
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "lerna": "^3.22.1"
+  }
 }
