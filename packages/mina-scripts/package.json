@@ -22,9 +22,9 @@
   "dependencies": {
     "@babel/core": "^7.1.5",
     "@babel/preset-env": "^7.1.5",
-    "@tinajs/mina-entry-webpack-plugin": "^0.6.5",
-    "@tinajs/mina-loader": "^0.6.4",
-    "@tinajs/mina-runtime-webpack-plugin": "^0.1.4",
+    "@tinajs/mina-entry-webpack-plugin": "^1.0.2",
+    "@tinajs/mina-loader": "^1.1.0",
+    "@tinajs/mina-runtime-webpack-plugin": "^1.0.1",
     "babel-loader": "^8.0.4",
     "copy-webpack-plugin": "^4.4.1",
     "file-loader": "^1.1.6",
@@ -34,8 +34,8 @@
     "postcss-loader": "^2.1.1",
     "relative-file-loader": "^1.1.12",
     "rimraf": "^2.6.2",
-    "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^3.11.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.25.1",
     "yargs": "^11.0.0"
   }
 }

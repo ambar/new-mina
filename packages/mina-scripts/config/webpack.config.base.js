@@ -83,12 +83,20 @@ module.exports = {
     }),
     new MinaEntryPlugin(),
     new MinaRuntimePlugin({
-      runtime: './common.js',
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common.js',
-      minChunks: 2,
+      runtime: './runtime.js',
     }),
     isProduction && new UglifyJsPlugin(),
   ].filter(Boolean),
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: 'common.js',
+      minChunks: 2,
+      minSize: 0,
+    },
+    runtimeChunk: {
+      name: 'runtime.js',
+    },
+  },
+  mode: isProduction ? 'production' : 'development',
 }
