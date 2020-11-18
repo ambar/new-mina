@@ -1,13 +1,16 @@
 {
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "start": "mina start",
     "build": "mina build"
   },
   "name": "mina-demo",
-  "keywords": ["gogen", "wechat"],
+  "keywords": [
+    "gogen",
+    "wechat"
+  ],
   "dependencies": {
-    "mina-scripts": "^0.1.0"
+    "mina-scripts": "^0.2.0"
   }
 }
