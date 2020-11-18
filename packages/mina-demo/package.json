@@ -4,5 +4,10 @@
   "scripts": {
     "start": "mina start",
     "build": "mina build"
+  },
+  "name": "mina-demo",
+  "keywords": ["gogen", "wechat"],
+  "dependencies": {
+    "mina-scripts": "^0.1.0"
   }
 }

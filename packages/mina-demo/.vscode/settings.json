@@ -1,0 +1,9 @@
+{
+  "files.associations": {
+    "*.wxml": "xml",
+    "*.wxss": "css",
+    "*.wxs": "js",
+    "*.mina": "vue"
+  },
+  "vetur.validation.template": false
+}
