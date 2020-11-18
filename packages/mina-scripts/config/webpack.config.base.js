@@ -19,6 +19,7 @@ module.exports = {
     path: distDir,
     filename: '[name]',
     publicPath: '/',
+    globalObject: 'wx',
   },
   module: {
     rules: [
@@ -99,5 +100,5 @@ module.exports = {
       name: 'runtime.js',
     },
   },
-  mode: isProduction ? 'production' : 'development',
+  mode: isProduction ? 'production' : 'none',
 }
