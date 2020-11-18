@@ -5332,10 +5332,10 @@ globby@^9.2.0:
     pify "^4.0.1"
     slash "^2.0.0"
 
-gogen@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/gogen/-/gogen-0.0.7.tgz#b5721674a0af4cde716cbef3ab85a78a9494dfe5"
-  integrity sha512-EsTJ4b7KOyvcVE96k167b5VnCgsMUegBVHhdMiSgfo/hEH0+/LkzWOamyYG/AY3gcPykM0hmG4dAGIDaFm2BUg==
+gogen@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gogen/-/gogen-1.0.0.tgz#594d0590f5fc53b8c5a4d6558bf65111b069b32f"
+  integrity sha512-MIRZ6Ou2Eco/O7k53nyvANACocHyaroZgGZWOYtj4d8H0lOc06dZtzTyC+y+m39oTYDhszbWjRCsj21cfCFO/g==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.2, graceful-fs@^4.2.4:
   version "4.2.4"

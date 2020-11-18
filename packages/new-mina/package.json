@@ -16,8 +16,11 @@
     "cli.js",
     "template"
   ],
-  "keywords": ["gogen", "wechat"],
+  "keywords": [
+    "gogen",
+    "wechat"
+  ],
   "dependencies": {
-    "gogen": "^0.0.7"
+    "gogen": "^1.0.0"
   }
 }
