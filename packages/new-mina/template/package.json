@@ -1,0 +1,7 @@
+{
+"private": true,
+  "scripts": {
+    "start": "mina start",
+    "build": "mina build"
+  }
+}

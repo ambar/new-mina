@@ -16,8 +16,7 @@
   "files": [
     "bin",
     "config",
-    "scripts",
-    "templates"
+    "scripts"
   ],
   "dependencies": {
     "@babel/core": "^7.1.5",
