@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 const MinaEntryPlugin = require('@tinajs/mina-entry-webpack-plugin')
 const MinaRuntimePlugin = require('@tinajs/mina-runtime-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -82,13 +82,21 @@ module.exports = {
       context: srcDir,
     }),
     new MinaEntryPlugin(),
-    new MinaRuntimePlugin({
-      runtime: './common.js',
+    new MinaRuntimePlugin(),
+  ].filter(Boolean),
+  optimization: {
+    ... (isProduction && {
+      minimize: true,
+      minimizer: [new TerserPlugin()],
     }),
-    new webpack.optimize.CommonsChunkPlugin({
+    splitChunks: {
+      chunks: 'all',
       name: 'common.js',
       minChunks: 2,
-    }),
-    isProduction && new UglifyJsPlugin(),
-  ].filter(Boolean),
+      minSize: 0,
+    },
+    runtimeChunk: {
+      name: 'runtime.js',
+    },
+  },
 }
