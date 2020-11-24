@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/ambar/new-mina/compare/new-mina@0.1.0...new-mina@0.2.0) (2020-11-24)
+
+
+### Features
+
+* support .env ([c16a215](https://github.com/ambar/new-mina/commit/c16a215b3019579283cc9cedd9f792b4d11b8731))
+
+
+
+
+
 # 0.1.0 (2020-11-18)
 
 
