@@ -5,5 +5,11 @@
     "*.wxs": "js",
     "*.mina": "vue"
   },
-  "vetur.validation.template": false
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "vetur.validation.template": false,
+  "vetur.validation.interpolation": false,
+  "vetur.validation.style": false,
+  "vetur.validation.script": false
 }
