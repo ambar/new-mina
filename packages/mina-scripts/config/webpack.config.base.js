@@ -1,14 +1,48 @@
-const webpack = require('webpack')
 const path = require('path')
+const fs = require('fs')
+const webpack = require('webpack')
 const MinaEntryPlugin = require('@tinajs/mina-entry-webpack-plugin')
 const MinaRuntimePlugin = require('@tinajs/mina-runtime-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const isProduction = process.env.NODE_ENV === 'production'
+const {NODE_ENV} = process.env
+const isProduction = NODE_ENV === 'production'
 const resolveCwd = path.resolve.bind(null, process.cwd())
 const srcDir = resolveCwd('src')
 const distDir = resolveCwd('dist')
+
+// https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
+const dotenvFiles = [
+  `.env.${NODE_ENV}.local`,
+  // Don't include `.env.local` for `test` environment
+  // since normally you expect tests to produce the same
+  // results for everyone
+  NODE_ENV !== 'test' && `.env.local`,
+  `.env.${NODE_ENV}`,
+  '.env',
+].filter(Boolean)
+
+// Load environment variables from .env* files. Suppress warnings using silent
+// if this file is missing. dotenv will never modify any environment variables
+// that have already been set.  Variable expansion is supported in .env files.
+// https://github.com/motdotla/dotenv
+// https://github.com/motdotla/dotenv-expand
+dotenvFiles.forEach((dotenvFile) => {
+  if (fs.existsSync(dotenvFile)) {
+    require('dotenv-expand')(require('dotenv').config({path: dotenvFile}))
+  }
+})
+
+const envKeys = Object.keys(process.env)
+  .filter((key) => /^APP_/i.test(key))
+  .reduce(
+    (env, key) => {
+      env[key] = process.env[key]
+      return env
+    },
+    {NODE_ENV}
+  )
 
 module.exports = {
   context: srcDir,
@@ -76,7 +110,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV']),
+    new webpack.EnvironmentPlugin(envKeys),
     // wxml-loader 不能处理的动态资源引用（wxss 暂由 postcss-import 处理）
     // @see https://github.com/Cap32/wxml-loader/issues/1
     new CopyWebpackPlugin(['project.config.json'], {
@@ -86,7 +120,7 @@ module.exports = {
     new MinaRuntimePlugin(),
   ].filter(Boolean),
   optimization: {
-    ... (isProduction && {
+    ...(isProduction && {
       minimize: true,
       minimizer: [new TerserPlugin()],
     }),
