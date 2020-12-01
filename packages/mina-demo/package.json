@@ -1,12 +1,12 @@
 {
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "mina start",
     "build": "mina build"
   },
   "name": "mina-demo",
   "dependencies": {
-    "mina-scripts": "^0.3.0"
+    "mina-scripts": "^0.3.1"
   }
 }
