@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/ambar/new-mina/compare/mina-scripts@0.3.1...mina-scripts@0.4.0) (2020-12-25)
+
+
+### Features
+
+* use esbuild instead of babel ([4fab88f](https://github.com/ambar/new-mina/commit/4fab88fba06581e59b2b88e2371442b05f1fccc0))
+
+
+
+
+
 ## [0.3.1](https://github.com/ambar/new-mina/compare/mina-scripts@0.3.0...mina-scripts@0.3.1) (2020-12-01)
 
 
