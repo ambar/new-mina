@@ -44,10 +44,22 @@ const envKeys = Object.keys(process.env)
     {NODE_ENV}
   )
 
-const scriptLoader = {
-  loader: 'esbuild-loader',
-  options: {target: 'es2015'},
-}
+const esVersion = 'es2015'
+const scriptLoader = [
+  {
+    loader: 'esbuild-loader',
+    options: {target: esVersion},
+  },
+  // esbuild 会将 async/await 转成 generator（见：https://esbuild.github.io/content-types/#javascript）
+  // 但微信小程序真机不支持 generator（虽然模拟器支持），因此将剩余工作将交给 babel，这仍然显著快于全部用 babel 转换
+  // NOTE: webpack loaders 是倒着执行的
+  {
+    loader: 'babel-loader',
+    options: {
+      plugins: ['babel-plugin-transform-async-to-promises'],
+    },
+  },
+]
 
 module.exports = {
   context: srcDir,
@@ -128,9 +140,7 @@ module.exports = {
   optimization: {
     ...(isProduction && {
       minimize: true,
-      minimizer: [
-        new ESBuildMinifyPlugin({target: scriptLoader.options.target}),
-      ],
+      minimizer: [new ESBuildMinifyPlugin({target: esVersion})],
     }),
     splitChunks: {
       chunks: 'all',

@@ -30,8 +30,8 @@ Page({
     message: 'Hello',
   },
 
-  onLoad(option) {
-    this.setData({message: this.data.message + ', world.'})
+  async onLoad(option) {
+    this.setData({message: this.data.message + await ', world.'})
   },
 })
 </script>

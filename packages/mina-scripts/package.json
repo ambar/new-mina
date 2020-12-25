@@ -22,6 +22,8 @@
     "@tinajs/mina-entry-webpack-plugin": "^1.5.3",
     "@tinajs/mina-loader": "^1.9.3",
     "@tinajs/mina-runtime-webpack-plugin": "^1.3.6",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
     "copy-webpack-plugin": "^4.4.1",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
