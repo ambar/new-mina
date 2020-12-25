@@ -3,8 +3,8 @@ const fs = require('fs')
 const webpack = require('webpack')
 const MinaEntryPlugin = require('@tinajs/mina-entry-webpack-plugin')
 const MinaRuntimePlugin = require('@tinajs/mina-runtime-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const {ESBuildPlugin, ESBuildMinifyPlugin} = require('esbuild-loader')
 
 const {NODE_ENV} = process.env
 const isProduction = NODE_ENV === 'production'
@@ -44,6 +44,11 @@ const envKeys = Object.keys(process.env)
     {NODE_ENV}
   )
 
+const scriptLoader = {
+  loader: 'esbuild-loader',
+  options: {target: 'es2015'},
+}
+
 module.exports = {
   context: srcDir,
   // issue: https://github.com/tinajs/mina-webpack/issues/12
@@ -64,7 +69,7 @@ module.exports = {
           loader: '@tinajs/mina-loader',
           options: {
             loaders: {
-              script: 'babel-loader',
+              script: scriptLoader,
               style: 'postcss-loader',
             },
           },
@@ -78,7 +83,7 @@ module.exports = {
           loader: '@tinajs/mina-loader',
           options: {
             loaders: {
-              script: 'babel-loader',
+              script: scriptLoader,
             },
           },
         },
@@ -86,7 +91,7 @@ module.exports = {
       // babel 转换，以匹配 browserslist
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        use: scriptLoader,
       },
       // wxml/js 中的静态资源引用
       {
@@ -110,6 +115,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ESBuildPlugin(),
     new webpack.EnvironmentPlugin(envKeys),
     // wxml-loader 不能处理的动态资源引用（wxss 暂由 postcss-import 处理）
     // @see https://github.com/Cap32/wxml-loader/issues/1
@@ -122,7 +128,9 @@ module.exports = {
   optimization: {
     ...(isProduction && {
       minimize: true,
-      minimizer: [new TerserPlugin()],
+      minimizer: [
+        new ESBuildMinifyPlugin({target: scriptLoader.options.target}),
+      ],
     }),
     splitChunks: {
       chunks: 'all',
