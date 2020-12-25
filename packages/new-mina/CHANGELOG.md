@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/ambar/new-mina/compare/new-mina@0.3.0...new-mina@0.3.1) (2020-12-25)
+
+
+### Bug Fixes
+
+* transform async to promise ([0051e37](https://github.com/ambar/new-mina/commit/0051e370d73c84425d10569db4cee7820b0af22d))
+
+
+
+
+
 # [0.3.0](https://github.com/ambar/new-mina/compare/new-mina@0.2.0...new-mina@0.3.0) (2020-12-25)
 
 
