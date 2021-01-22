@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/ambar/new-mina/compare/mina-scripts@0.4.1...mina-scripts@0.5.0) (2021-01-22)
+
+
+### Features
+
+* add webpackbar ([e4b51f8](https://github.com/ambar/new-mina/commit/e4b51f81aa36e0d80cab6d9921fcb88432ec724b))
+* add wxml loader ([7aa0b0b](https://github.com/ambar/new-mina/commit/7aa0b0bc2081dd6f6a37af620c8f046f336fd13b))
+
+
+
+
+
 ## [0.4.1](https://github.com/ambar/new-mina/compare/mina-scripts@0.4.0...mina-scripts@0.4.1) (2020-12-25)
 
 

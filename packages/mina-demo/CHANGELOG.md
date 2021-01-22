@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.3](https://github.com/ambar/new-mina/compare/mina-demo@1.3.2...mina-demo@1.3.3) (2021-01-22)
+
+**Note:** Version bump only for package mina-demo
+
+
+
+
+
 ## [1.3.2](https://github.com/ambar/new-mina/compare/mina-demo@1.3.1...mina-demo@1.3.2) (2020-12-25)
 
 
