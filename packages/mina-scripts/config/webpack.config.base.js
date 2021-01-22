@@ -1,6 +1,7 @@
-const path = require('path')
 const fs = require('fs')
+const path = require('path')
 const webpack = require('webpack')
+const WebpackBar = require('webpackbar')
 const MinaEntryPlugin = require('@tinajs/mina-entry-webpack-plugin')
 const MinaRuntimePlugin = require('@tinajs/mina-runtime-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -156,6 +157,9 @@ module.exports = {
     }),
     new MinaEntryPlugin(),
     new MinaRuntimePlugin(),
+    new WebpackBar({
+      reporters: [isProduction ? 'basic' : 'fancy', 'profile'],
+    }),
   ].filter(Boolean),
   optimization: {
     ...(isProduction && {

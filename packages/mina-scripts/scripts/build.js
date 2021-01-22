@@ -5,23 +5,16 @@ const emptyDir = require('./utils/emptyDir')
 const resolveConfig = require('./utils/resolveConfig')
 
 const build = async () => {
-  console.info('building')
   await emptyDir()
 
   const config = resolveConfig()
   const compiler = webpack(config.webpack)
 
-  compiler.run((err, stats) => {
+  compiler.run((err) => {
     if (err) {
       console.error(err)
       return
     }
-
-    console.log(
-      stats.toString({
-        colors: true,
-      })
-    )
   })
 }
 
