@@ -124,6 +124,26 @@ module.exports = {
           },
         },
       },
+      // 兼容原生
+      {
+        test: /\.wxml$/,
+        use: [
+          {
+            loader: 'relative-file-loader',
+            options: {
+              name: 'wxml/[name].[ext]',
+            },
+          },
+          {
+            loader: '@tinajs/wxml-loader',
+            options: {
+              raw: true,
+              enforceRelativePath: true,
+              root: srcDir,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
