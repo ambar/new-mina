@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/ambar/new-mina/compare/mina-scripts@0.5.0...mina-scripts@0.5.1) (2021-01-26)
+
+
+### Bug Fixes
+
+* add @babel/core to deps ([515c870](https://github.com/ambar/new-mina/commit/515c870acd10cc93c287bc033d85150f8b3f6af7))
+
+
+
+
+
 # [0.5.0](https://github.com/ambar/new-mina/compare/mina-scripts@0.4.1...mina-scripts@0.5.0) (2021-01-22)
 
 
